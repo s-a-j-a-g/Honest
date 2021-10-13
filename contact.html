@@ -55,8 +55,16 @@
 
 
         <!---------Location Map--------->
-        <section class = "location">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.527679167254!2d85.31282831501524!3d27.700989482794512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19ab1edbcaa3%3A0xdc1822063c54a057!2sTundikhel!5e0!3m2!1sen!2snp!4v1633234290846!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section class = "location" id = "map">
+            <!-- <iframe
+                width="600"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2JHXdyc80XUaWgBlXR03Hp5c8EgjcXNM
+                  &q=Little Angels School, Lalitpur">
+              </iframe> -->
         </section>        
         
 
@@ -157,6 +165,208 @@
                 navLinks.style.right = "-200px";
             }
         </script>
+
+
+        <script>
+            var mapStyle = [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#212121"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.icon",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                    {
+                        "color": "#212121"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative.country",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#9e9e9e"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative.locality",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#bdbdbd"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#181818"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#616161"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                    {
+                        "color": "#1b1b1b"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                    {
+                        "color": "#2c2c2c"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#8a8a8a"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#373737"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#3c3c3c"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway.controlled_access",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#4e4e4e"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#616161"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#757575"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#000000"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#3d3d3d"
+                    }
+                    ]
+                }
+            ];
+            function initMap(){
+                var location = {lat: 27.701026424668317, lng: 85.31521135373039};
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15, 
+                    center: location,
+                    style: mapStyle});
+                var marker = new google.maps.Marker({position: location, map: map, icon: "https://img.icons8.com/ios-filled/50/000000/marker.png"});
+            }
+        </script>
+        <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2JHXdyc80XUaWgBlXR03Hp5c8EgjcXNM&callback=initMap">
+        </script>
+
     </body>
 
 </html>
