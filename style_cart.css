@@ -1,0 +1,338 @@
+/*----------------------------------*/
+/*------------- Cart --------------*/
+/*--------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 15vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header span{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.company-logo img{
+    width: 150px;
+}
+
+.right-column a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.top-row{
+    padding: 8px 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+
+.top-row a{
+    margin: 0 10px;
+}
+
+.top-row img{
+    margin: 0 10px;
+    /* width: 30px; */
+}
+
+.nav-links{
+    flex: 1; /* occupies all the spaces in the row*/
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none; /*No bullets will be added*/
+    display: inline-block; /*for horizontal display of the list*/
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s; /*transition time*/
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none; /*hides the close button and menu button in full display mode*/
+}
+
+.fa.fa-bars{
+    text-align: right;
+    
+}
+
+
+@media(max-width: 700px){
+    .nav-links ul li{
+        display: block; /*changing from inline-block to block*/
+    }
+
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh; /*from top to bottom*/
+        width: 200px;
+        top: 0;
+        right: -200px; /*as the width is 200px, by setting -200 right we are hiding the nav(menu) from the screen*/
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #000000;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+
+/*----------------------------------------*/
+/*-----------CART ITEM DETAILS-----------*/
+/*--------------------------------------*/
+.cart-item-details{
+    margin: 80px 0;
+    width: 100%
+}
+
+.cart-container{
+    width: 80%;
+    margin: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* table tr{
+    margin-top: 50px;
+} */
+
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #000000;
+    background: #cce5ff;
+}
+
+td{
+    padding: 10px 5px; 
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+td a{
+    color: #ff523b;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table{
+    border-top: 3px solid #000000;
+    width: 100%;
+    max-width: 350px;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+
+@media(max-width: 700px){
+    .cart-info p{
+        display: none;
+    }
+}
+
+
+/*-------------------------------*/
+/*------------FOOTER------------*/
+/*-----------------------------*/
+.footer{
+    width: 100%;
+    text-align: left;
+    padding-top: 80px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.row1-footer{
+    width: 85%;
+    margin: auto;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between; /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+    /* padding: 40px; */
+}
+
+.footer h4{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.footer-column a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover{
+    color: #858181;
+}
+
+.footer-column i{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.footer-column{
+    position: relative;
+
+}
+
+.vertical-line{
+    border-left: 1px solid #ffffff;
+    height: 100%;
+    position: absolute;
+    margin-right: 30px;
+}
+
+.column3-content{
+    margin-left: 40px;
+}
+
+.column3-content h4{
+    margin-bottom: 7px;
+}
+
+.footer-column input{
+    padding: 10px 30px;
+    margin: 20px 0;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.signup-btn{
+    width: 70px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    padding: 10px 15px;
+    font-size: 13px;
+    background: #000000;
+    position: relative;
+    cursor: pointer;
+}
+
+.signup-btn:hover{
+    color: #000000;
+    background: #ffffff;
+    transition: 1s;
+}
+
+
+@media(max-width: 1200px){
+    .row1-footer{
+        flex-direction: column;
+    }
+
+    .vertical-line{
+        display: none;
+    }
+    
+    .column3-content{
+        margin-left: 0;
+    }
+
+    .footer-column input{
+        /* width: 90%; */
+        max-width: 450px;
+    }
+}
+
+
+
+.row2-footer{
+    width: 85%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+    margin-right: 10px;
+}
+
+.row3-footer{
+    width: 100%;
+    margin: auto;
+    text-align: right;   
+}
+
+.row3-footer p{
+    margin-top: 60px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}

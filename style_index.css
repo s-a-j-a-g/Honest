@@ -1,0 +1,663 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 15vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header span{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.company-logo img{
+    width: 150px;
+}
+
+.right-column a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.top-row{
+    padding: 8px 12px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+
+.top-row a{
+    margin: 0 10px;
+}
+
+.top-row img{
+    margin: 0 10px;
+    /* width: 30px; */
+}
+
+.nav-links{
+    flex: 1; /* occupies all the spaces in the row*/
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none; /*No bullets will be added*/
+    display: inline-block; /*for horizontal display of the list*/
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s; /*transition time*/
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .fa{
+    display: none; /*hides the close button and menu button in full display mode*/
+}
+
+.fa.fa-bars{
+    text-align: right;
+    
+}
+
+
+@media(max-width: 700px){
+    .nav-links ul li{
+        display: block; /*changing from inline-block to block*/
+    }
+
+    .nav-links{
+        position: fixed;
+        background: #f44336;
+        height: 100vh; /*from top to bottom*/
+        width: 200px;
+        top: 0;
+        right: -200px; /*as the width is 200px, by setting -200 right we are hiding the nav(menu) from the screen*/
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #000000;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+
+/*-----------------------------*/
+/*---------SUB HEADER---------*/
+/*---------------------------*/
+.sub-header{
+    min-height: 85vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(rgba(4, 8, 30, 0.7), rgba(4, 8, 30, 0.7)),url(images/cover.jpg);
+}
+
+.text-box{
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*the div will be in the center*/
+    text-align: center;
+    
+}
+
+.text-box h1{
+    font-size: 25px;
+}
+
+.text-box p{
+    margin: -10px 0 10px;
+    font-size: 70px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 100px;
+    padding: 15px 15px;
+    font-size: 13px;
+    background: #ffffff;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    color: #ffffff;
+    background: transparent;
+    transition: 1s;
+}
+
+
+/*--------------------------*/
+/*---------TAGLINE---------*/
+/*------------------------*/
+.tagline{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.tagline h1{
+    color: #c25959;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+
+
+/*-------------------------------------*/
+/*---------EXCLUSIVE PRODUCT----------*/
+/*-----------------------------------*/
+.exclusive-product{
+    width: 100%;
+    padding: 60px 0;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+.row_exclusive-product{
+    width: 70%;
+    margin: auto;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exclusive-product-column{
+    text-align: left;
+    margin: 0 25px;
+    width: 60%;
+}
+
+.exclusive-product-column p{
+    margin-bottom: 30px;
+}
+
+.exclusive-product-column h1{
+    font-size: 37px;
+}
+
+.exclusive-product-column .offer-img{
+    width: 100%;
+    border-radius: 100%;
+    /* padding: 50px; */
+}
+
+small{
+    color: #555;
+}
+
+.exclusive-buy-now-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 100px;
+    padding: 15px 20px;
+    font-size: 13px;
+    background: #000000;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.exclusive-buy-now-btn:hover{
+    color: #000000;
+    border: 2px #000000 solid;
+    background: #ffffff;
+    transition: 1s;
+}
+
+
+
+/*-------------------------------*/
+/*---------OWNER QUOTE----------*/
+/*-----------------------------*/
+.owner_quote{
+    width: 100%;
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+    background-image:url(images/owner-quote-background.gif)
+}
+
+.row-owner_quote{
+    width: 70%;
+    margin: auto;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between;
+}
+
+.owner_quote-column{
+    flex-basis: 100%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.fas.fa-quote-left{
+    font-size: 34px;
+    color: #222;
+}
+
+.owner_quote-column p{
+    width: 80%;
+    padding-top: 0px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.owner_quote-column h3{
+    width: 80%;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.owner_quote-column img{
+    height: 250px;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+
+@media(max-width: 700px){
+    .row-owner_quote{
+        flex-direction: column;
+    }
+
+    .owner_quote-column{
+        flex-basis: 100%;
+        border-radius: 10px;
+        margin-bottom: 0%;
+        text-align: center;
+        background: #fff3f3;
+        padding: 25px;
+        display:table-column;
+    }
+    
+    .owner_quote-column p{
+        width: 90%;
+        padding-top: 75px;
+        padding-left: 0px;
+        text-align: left;
+        padding-bottom: -50px;
+    }
+
+    .owner_quote-column img{
+        position: relative;
+        top: -350px;
+        height: 150px;
+        margin: 0;
+    }
+}
+
+
+
+/*-------------------------------*/
+/*---------MODEL PHOTOS---------*/
+/*-----------------------------*/
+.models{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.row-models{
+    margin-top: 5%;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between;
+}
+
+.models-column{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.models-column img{
+    width: 100%;
+    display: block; /*this line is required for border-radius to work*/
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /*puts the h3 text at the center from the x-axis*/
+    position: absolute;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+@media(max-width: 700px){
+    .row-models{
+        flex-direction: column;
+    }
+}
+
+
+
+/*-------------------------------*/
+/*---------TESTIMONIALS---------*/
+/*-----------------------------*/
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.testimonials h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.row-testimonials{
+    margin-top: 1%;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between; /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+}
+
+.testimonials-column{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}                         
+
+.testimonials-column h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.testimonials-column:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.testimonials-column .fas{
+    color: #f44336
+}
+
+.testimonials-column .far{
+    color: #f44336
+}
+
+
+@media(max-width: 700px){
+    .row-testimonials{
+        flex-direction: column;
+    }
+
+    .testimonials h1{
+        font-size: 40px;
+        font-weight: 600;
+    }
+}
+
+
+
+/*----------------------------------------*/
+/*-----------FEATURED PRODUCTS-----------*/
+/*--------------------------------------*/
+.featured-products{
+    text-align: center;
+    padding-top: 100px;
+    background: radial-gradient(#fff, #eb6b6b);
+}
+
+.row-products{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between; /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+}
+
+.products-column{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.products-column:hover{
+    transform: translateY(-5px);
+}
+
+.products-column img{
+    width: 100%;
+}
+
+.products-column h5{
+    padding: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.products-column h4{
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@media(max-width: 700px){
+    .row-products{
+        flex-direction: column;
+    }
+}
+
+
+
+/*-------------------------------*/
+/*------------FOOTER------------*/
+/*-----------------------------*/
+.footer{
+    width: 100%;
+    text-align: left;
+    padding-top: 80px;
+    background: #000000;
+    color: #ffffff;
+}
+
+.row1-footer{
+    width: 85%;
+    margin: auto;
+    display: flex; /*the div inside the row will be in the column*/
+    justify-content: space-between; /* Distribute items evenly The first item is flush with the start, the last is flush with the end */
+    /* padding: 40px; */
+}
+
+.footer h4{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.footer-column a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover{
+    color: #858181;
+}
+
+.footer-column i{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.footer-column{
+    position: relative;
+
+}
+
+.vertical-line{
+    border-left: 1px solid #ffffff;
+    height: 100%;
+    position: absolute;
+    margin-right: 30px;
+}
+
+.column3-content{
+    margin-left: 40px;
+}
+
+.column3-content h4{
+    margin-bottom: 7px;
+}
+
+.footer-column input{
+    padding: 10px 30px;
+    margin: 20px 0;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.signup-btn{
+    width: 70px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    padding: 10px 15px;
+    font-size: 13px;
+    background: #000000;
+    position: relative;
+    cursor: pointer;
+}
+
+.signup-btn:hover{
+    color: #000000;
+    background: #ffffff;
+    transition: 1s;
+}
+
+
+@media(max-width: 1200px){
+    .row1-footer{
+        flex-direction: column;
+    }
+
+    .vertical-line{
+        display: none;
+    }
+    
+    .column3-content{
+        margin-left: 0;
+    }
+
+    .footer-column input{
+        /* width: 90%; */
+        max-width: 450px;
+    }
+}
+
+
+
+.row2-footer{
+    width: 85%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+    margin-right: 10px;
+}
+
+.row3-footer{
+    width: 100%;
+    margin: auto;
+    text-align: right;   
+}
+
+.row3-footer p{
+    margin-top: 60px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}

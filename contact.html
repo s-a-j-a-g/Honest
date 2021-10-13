@@ -1,0 +1,162 @@
+<!---------------- https://www.youtube.com/watch?v=Xh1WrXxEWjc&t=0s ----------------->
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">   
+        <meta name = "viewport" content = "width=device-width", initial-scale = 1.0">
+        <title>Contact Us | Honest Beauty</title>
+        <link rel = "stylesheet" href="style_contact.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/d4e285b1a1.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <!---------Header--------->
+        <section class = "header">
+            <span>
+                <div class = "left-column">
+                    <a class = "company-logo" href = "index.html">
+                        <img src = "images/logo.jpg">
+                    </a>
+                </div>
+                <div class = "right-column">
+                    <div class = "top-row">
+                        <a href = "login.html">SIGN IN</a>
+                        <img src = "images/bag.svg" width = "30px", height = "30px">
+                    </div>
+                    <div class = "bottom-row">
+                        <nav>
+                            <div class = "nav-links" id = "navLinks">
+                                <i class="fa fa-times" onclick = "hideMenu()"></i>
+                                <ul>
+                                    <li><a href = "index.html">HOME</a></li>
+                                    <li><a href = "about.html">ABOUT</a></li>
+                                    <li><a href = "products.html">PRODUCTS</a></li>
+                                    <li><a href = "contact.html">CONTACT</a></li>    
+                                </ul>
+                            </div>
+                            <i class="fa fa-bars" onclick = "showMenu()"></i>   
+                        </nav>
+                    </div>
+                </div>
+            </span>
+        </section>     
+
+
+        <!---------Sub Header--------->
+        <section class = "sub-header">
+            <h1>We are now in Kathmandu and Lalitpur.</h1>
+        </section>
+
+
+        <!---------Location Map--------->
+        <section class = "location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.527679167254!2d85.31282831501524!3d27.700989482794512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19ab1edbcaa3%3A0xdc1822063c54a057!2sTundikhel!5e0!3m2!1sen!2snp!4v1633234290846!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>        
+        
+
+        <!---------Contact Us--------->
+        <section class = "contact-us">
+            <div class="row_contact-us">
+                <div class="contact-column">
+                    <div>
+                        <i class="fas fa-home"></i>
+                        <span>
+                            <h5>Tundikhel, Kathmandu</h5>
+                            <p>Bagmati, Nepal<p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>
+                            <h5>+977 01 4100000</h5>
+                            <p>Sunday to Friday<p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="far fa-envelope"></i>
+                        <span>
+                            <h5>info@honestbeauty.com</h5>
+                            <p>Email us your query.<p>
+                        </span>
+                    </div>          
+                </div>
+                <div class = "contact-column">
+                    <form action = "contact.inc.php" method = "post">
+                        <input type = "text" name = "name" placeholder = "Enter your Name" required>
+                        <input type = "email" name = "email" placeholder = "Enter Email Address" required>
+                        <input type = "text" name = "subject" placeholder = "Enter your Subject" required>
+                        <textarea rows = "8" name = "message" placeholder = "Message"></textarea>
+                        <button type = "submit" class = "submit-message-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!---------Footer--------->
+        <section class = "footer">
+            <div class = "row1-footer">
+                <div class = "footer-column">
+                    <h4>About Us</h4>
+                    <a href = "blog.html">Blog</a>
+                    <a href = "about.html">Our Story</a>
+                    <a href = "honest_standards.html">Honest Standards</a>
+                    <a href = "faqs.html">FAQs</a>
+                    <a href = "investors.html">Investors</a>
+                </div>
+                <div class = "footer-column">
+                    <h4>Social Media</h4>
+                    <a href = "https://www.facebook.com/" target = "_blank"><i class="fab fa-facebook">  Facebook</i></a>
+                    <a href = "https://www.instagram.com/" target = "_blank"><i class = "fab fa-instagram">  Instagram</i></a>
+                    <a href = "https://www.twitter.com/" target = "_blank"><i class = "fab fa-twitter">  Twitter</i></a>
+                    <a href = "https://www.pinterest.com/" target = "_blank"><i class = "fab fa-pinterest">  Pinterest</i></a>
+                </div>
+                <div class = "footer-column">
+                    <div class = "vertical-line"></div>
+                    <div class = column3-content>
+                        <h4>Stay in Touch</h4>
+                        <p>Stay up-to-date on Honest products, promotions and blog articles.</p>
+                        <div class = "input-email" id="footer-email-input">
+                            <input aria-label = "Email Address" id="news_letter_Email" placeholder=" Enter Email Address" type="text">
+                        </div>
+                        <a href = "" class = "signup-btn" id="signup" type="submit" value="Sign Up">SIGN UP</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "row2-footer">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iOS</p>
+                <div class = "app-logo">
+                    <img src = "images/play-store.png">
+                    <img src = "images/app-store.png">
+                </div>    
+            </div>
+
+            <div class = "row3-footer">
+                <p><i class="far fa-copyright"></i>2021. The Honest Company, Inc. All Rights Reserved.</p>
+            </div>
+        </section>
+
+
+
+        <!---------JavaScript for Toggle Menu--------->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+
+</html>

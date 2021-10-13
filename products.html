@@ -1,0 +1,183 @@
+<!---------------- --------------->
+<!DOCTYPE html>
+<html lang = "en">
+    <head> 
+        <meta charset = "UTF-8">   
+        <meta name = "viewport" content = "width=device-width", initial-scale = 1.0">
+        <title>Products | Honest Beauty</title>
+        <link rel = "stylesheet" href="style_products.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/d4e285b1a1.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <!---------Header--------->
+        <section class = "header">
+            <span>
+                <div class = "left-column">
+                    <a class = "company-logo" href = "index.html">
+                        <img src = "images/logo.jpg">
+                    </a>
+                </div>
+                <div class = "right-column">
+                    <div class = "top-row">
+                        <a href = "login.html">SIGN IN</a>
+                        <img src = "images/bag.svg" width = "30px", height = "30px">
+                    </div>
+                    <div class = "bottom-row">
+                        <nav>
+                            <div class = "nav-links" id = "navLinks">
+                                <i class="fa fa-times" onclick = "hideMenu()"></i>
+                                <ul>
+                                    <li><a href = "index.html">HOME</a></li>
+                                    <li><a href = "about.html">ABOUT</a></li>
+                                    <li><a href = "products.html">PRODUCTS</a></li>
+                                    <li><a href = "contact.html">CONTACT</a></li>    
+                                </ul>
+                            </div>
+                            <i class="fa fa-bars" onclick = "showMenu()"></i>   
+                        </nav>
+                    </div>
+                </div>
+            </span>
+        </section>      
+
+
+        <!---------Products--------->
+        <section class = "products">
+            <h1>Our Products</h1>
+            <p>Best Price for our Organic Products</p>
+
+            <div class = "select-combobox">
+                <select>
+                    <option>SORT BY</option>
+                    <option>MOST POPULAR</option>
+                    <option>PRICE LOW TO HIGH</option>
+                    <option>PRICE HIGH TO LOW</option>
+                </select>
+            </div>
+
+            <div class="row-products">
+                <div class = "products-column">
+                    <a href = "products-page/gentle-gel-cleanser.html">
+                        <img src = "images/products/Gentle-Gel-Cleanser/gentle-gel-cleanser.jpg">
+                        <h5>Gentle Gel Cleanser</h5>
+                        <h4>Rs. 1499</h4>
+                    </a>
+                </div>
+                <div class = "products-column">
+                    <img src = "images/products/pollution-solution-purifying-toner.jpg">
+                    <h5>Pollution Solution Purifying Toner</h5>
+                    <h4>Rs. 799</h4>
+                </div>
+                <div class = "products-column">
+                    <img src = "images/products/3-in-1-detox-mud-mask.jpg">
+                    <h5>3-in-1 Detox Mud Mask</h5>
+                    <h4>Rs. 399</h4>
+                </div>
+                <div class = "products-column">
+                    <img src = "images/products/calm-heal-melting-balm.jpg">
+                    <h5>Calm + Heal Melting Balm</h5>
+                    <h4>Rs. 399</h4>
+                </div>
+            </div>
+
+            <div class="row-products">
+                <div class = "products-column">
+                    <img src = "images/products/self-defense-mineral-sunscreen-fuid-spf-34.jpg">
+                    <h5>Self Defense Mineral Sunscreen Fluid SPF 34</h5>
+                    <h4>Rs. 1499</h4>
+                </div>
+                <div class = "products-column">
+                    <img src = "images/products/eye-radiance-c-moisturizer.jpg">
+                    <h5>Everyday Radiance + C Moisturizer</h5>
+                    <h4>Rs. 799</h4>
+                </div>
+                <div class = "products-column">
+                    <img src = "images/products/beauty-sleep-resurfacing-serum.jpg">
+                    <h5>Beauty Sleep Resurfacing Serum</h5>
+                    <h4>Rs. 399</h4>
+                </div>
+                <div class = "products-column">
+                    <img src = "images/products/get-it-together-eye-shadow-palette.gif">
+                    <h5>Get It Together Eyeshadow Palette</h5>
+                    <h4>Rs. 399</h4>
+                </div>
+            </div>
+
+            <div class = "page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594;</span>
+            </div>
+        </section>
+
+
+        <!---------Footer--------->
+        <section class = "footer">
+            <div class = "row1-footer">
+                <div class = "footer-column">
+                    <h4>About Us</h4>
+                    <a href = "blog.html">Blog</a>
+                    <a href = "about.html">Our Story</a>
+                    <a href = "honest_standards.html">Honest Standards</a>
+                    <a href = "faqs.html">FAQs</a>
+                    <a href = "investors.html">Investors</a>
+                </div>
+                <div class = "footer-column">
+                    <h4>Social Media</h4>
+                    <a href = "https://www.facebook.com/" target = "_blank"><i class="fab fa-facebook">  Facebook</i></a>
+                    <a href = "https://www.instagram.com/" target = "_blank"><i class = "fab fa-instagram">  Instagram</i></a>
+                    <a href = "https://www.twitter.com/" target = "_blank"><i class = "fab fa-twitter">  Twitter</i></a>
+                    <a href = "https://www.pinterest.com/" target = "_blank"><i class = "fab fa-pinterest">  Pinterest</i></a>
+                </div>
+                <div class = "footer-column">
+                    <div class = "vertical-line"></div>
+                    <div class = column3-content>
+                        <h4>Stay in Touch</h4>
+                        <p>Stay up-to-date on Honest products, promotions and blog articles.</p>
+                        <div class = "input-email" id="footer-email-input">
+                            <input aria-label = "Email Address" id="news_letter_Email" placeholder=" Enter Email Address" type="text">
+                        </div>
+                        <a href = "" class = "signup-btn" id="signup" type="submit" value="Sign Up">SIGN UP</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "row2-footer">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iOS</p>
+                <div class = "app-logo">
+                    <img src = "images/play-store.png">
+                    <img src = "images/app-store.png">
+                </div>    
+            </div>
+
+            <div class = "row3-footer">
+                <p><i class="far fa-copyright"></i>2021. The Honest Company, Inc. All Rights Reserved.</p>
+            </div>
+        </section>
+
+
+
+        <!---------JavaScript for Toggle Menu--------->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+    </body>
+
+</html>
