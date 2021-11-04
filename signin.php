@@ -64,7 +64,7 @@
                             <hr id = "Indicator">
                         </div>
                     
-                        <form class = "input-group" id = "LogInForm" action = "signin.inc.php" method = "post">
+                        <form class = "input-group" id = "LogInForm" action = "includes/signin.inc.php" method = "post">
                             <input type = "text" name = "username" class = "input-field" placeholder = "Username" required>
                             <input type = "password" name = "password" class = "input-field" placeholder = "Password" required>
                             <input type = "checkbox" class = "check-box"><span>Remember Me</span>
@@ -72,7 +72,7 @@
                             <a href = "">Forget Password</a>
                         </form>
     
-                        <form class = "input-group" id ="RegistrationForm" action = "signup.inc.php" method = "post">
+                        <form class = "input-group" id ="RegistrationForm" action = "includes/signup.inc.php" method = "post">
                             <input type = "text" name = "name" class = "input-field" placeholder = "Full Name" required>
                             <input type = "email" name = "email" class = "input-field" placeholder = "Email" required>
                             <input type = "text" name = "username" class = "input-field" placeholder = "Username" required>
@@ -91,9 +91,6 @@
                                 }
                                 elseif($_GET["error"] == "wronglogin"){
                                     echo "<p>Incorrect Login Information</p>";
-                                }
-                                elseif($_GET["error"] == "none"){
-                                    echo "<p>You have signed in!</p>";
                                 }
                             }
                         ?>

@@ -17,8 +17,22 @@
     
     <body>
         <!--------Pre-Loader--------->
-        <div id = "preloader">
-        </div>
+        <!-- <div id = "preloader">
+        </div> -->
+
+
+        <!--------Custom Pre-Loader--------->
+        <div class = "preloader">
+            <div class = "skill">
+                <div class = "outer">
+                    <div class = "inner">
+                        <div id = "number">
+                            65%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
  
 
         <!---------Header--------->
@@ -102,12 +116,12 @@
                     </div>          
                 </div>
                 <div class = "contact-column">
-                    <form action = "contact.inc.php" method = "post">
+                    <form action = "includes/contact.inc.php" method = "post">
                         <input type = "text" name = "name" placeholder = "Enter your Name" required>
                         <input type = "email" name = "email" placeholder = "Enter Email Address" required>
                         <input type = "text" name = "subject" placeholder = "Enter your Subject" required>
                         <textarea rows = "8" name = "message" placeholder = "Message"></textarea>
-                        <button type = "submit" class = "submit-message-btn">Send Message</button>
+                        <button type = "submit" name = "submit-msg" class = "submit-message-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -162,12 +176,13 @@
 
 
         <!---------JavaScript for Toggle Menu--------->
-        <script>
+        <!-- <script>
             var loader = document.getElementById("preloader");
             window.addEventListener("load", function(){
                 loader.style.display = "none";
             })
-        </script>
+        </script> -->
+
 
         <!---------JavaScript for Toggle Menu--------->
         <script>

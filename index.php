@@ -37,7 +37,7 @@
                             if(isset($_SESSION["userUsername"])){
                                 echo '<a href = "profile.php">' . $_SESSION["userName"] . '</a>';
                                 echo '<img src = "images/bag.svg" width = "30px", height = "30px">';
-                                echo '<a href = "logout.inc.php">Log Out</a>';
+                                echo '<a href = "includes/logout.inc.php">Log Out</a>';
                             }
                             else{
                                 echo '<a href = "login.html">SIGN IN</a>';
