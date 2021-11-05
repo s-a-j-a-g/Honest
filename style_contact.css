@@ -13,63 +13,47 @@
 /*----------- PRE-LOADER -----------*/
 /*---------------------------------*/
 #preloader{
-    background: #ffffff url(images/preloader.gif) no-repeat center center; /*https://www.honest.com/on/demandware.static/Sites-honest-Site/-/default/v1634082768991/images/svg-icons/emblem-nc.svg*/
-    background-size: 40%;
-    height: 100vh;
     width: 100%;
-    position: fixed;
-    z-index: 100;
+    height: 100vh;
+    background: #ffffff;
+    display: grid;
+    place-items: center;
 }
 
-
-.skill{
-    width: 160px;
-    height: 160px;
-    background: cornflowerblue;
+.center_div{
+    width: 10rem; /*1rem = 16px*/
+    height: 10rem;
+    /* background-color: #f44336; */
     position: relative;
 }
 
-.outer{
-    height: 160px;
-    width: 160px;
+.rot{
+    width: 10rem;
+    height: 10rem;
+    border-right: 4px solid #000000;
     border-radius: 50%;
-    padding: 20px; 
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), 
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    animation: rot 2s linear infinite;
 }
 
-.inner{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-                -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-}
-
-#number{
-    font-weight: 600px;
-    color: #555;
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 
 }
 
-circle{
-    
-}
-
-/* .spinner{
-    content: "";
+#loading-text{
+    color: #000000;
     position: absolute;
-    display: block;
-    width: 92px;
-    height: 92px;
-    border: 4px solid #000;
-    border-right-color: transparent;
-    border-radius: 50%;
-    animation: spin 1.5s linear infinite;
-} */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+}
 
 
 
