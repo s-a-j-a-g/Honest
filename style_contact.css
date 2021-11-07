@@ -18,6 +18,8 @@
     background: #ffffff;
     display: grid;
     place-items: center;
+    position: fixed;
+    z-index: 100;
 }
 
 .center_div{
@@ -277,6 +279,7 @@ nav .fa{
     background: #000000;
     color: #ffffff;
     transition: 1s;
+    cursor: pointer;
 }
 
 

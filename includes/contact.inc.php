@@ -7,7 +7,7 @@ if (isset($_POST["submit-msg"])){
     $message = $_POST['message'];
 
 
-    include 'dbh.inc.php';
+    require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
 
     if(emptyInputContactForm($name, $visitor_email, $subject, $message) !== false){

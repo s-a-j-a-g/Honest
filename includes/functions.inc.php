@@ -68,7 +68,7 @@ function pwdMatch($password, $pwdRepeat){
 /////////// CHECKS IF THE USERNAME/EMAIL HAS ALREADY BEEN TAKEN /////////
 ////////////////////////////////////////////////////////////////////////
 function usernameExists($conn, $email, $username){
-    $sql = "SELECT * FROM users WHERE usersEmail = ? OR usersUserName = ?;";
+    $sql = "SELECT * FROM users WHERE usersEmail = ? OR usersUsername = ?;";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -97,7 +97,7 @@ function usernameExists($conn, $email, $username){
 ///////////////// DATAS ARE STORED IN THE DATABASE /////////////////
 ///////////////////////////////////////////////////////////////////
 function createUser($conn, $name, $email, $username, $password){
-    $sql = "INSERT INTO users(usersName, usersEmail, usersUserName, usersPassword) VALUES(?, ?, ?, ?);";
+    $sql = "INSERT INTO users(usersName, usersEmail, usersUsername, usersPassword) VALUES(?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -165,7 +165,7 @@ function loginUser($conn, $username, $password){
         session_start();
         $_SESSION["userID"] = $userExists["usersID"];
         $_SESSION["userName"] = $userExists["usersName"];
-        $_SESSION["userUsername"] = $userExists["usersUserName"];
+        $_SESSION["userUsername"] = $userExists["usersUsername"];
         header("location: ../index.php");
         exit();
     }
